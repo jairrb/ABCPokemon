@@ -1,9 +1,11 @@
-package br.com.digitalhouse.abcpokemon;
+package br.com.digitalhouse.abcpokemon.cadastro;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import br.com.digitalhouse.abcpokemon.R;
+
+public class CadastroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
