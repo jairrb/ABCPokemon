@@ -44,49 +44,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="bottom"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/imageBack"
         app:layout_constraintEnd_toEndOf="@+id/imageBack"
         app:layout_constraintStart_toStartOf="@+id/imageBack"
-        app:layout_constraintTop_toBottomOf="@+id/imagePikachu">
+        app:layout_constraintTop_toTopOf="@+id/imagePikachu">
 
         <Button
             android:id="@+id/btnLogin"
             style="@style/ButtonRadiusTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="64dp"
             android:backgroundTint="#f26e22"
-            android:drawableLeft="@drawable/pokebola"
-            android:drawableRight="@drawable/pokebola"
+            android:drawableLeft="@drawable/ic_pokeball"
+            android:drawableRight="@drawable/ic_pokeball"
             android:text="@string/sign_in" />
 
 
         <Button
             android:id="@+id/btnRegister"
             style="@style/ButtonRadiusTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="64dp"
             android:backgroundTint="#f2a30f"
             android:text="@string/create_an_account" />
 
         <Button
             android:id="@+id/btnFacebook"
             style="@style/ButtonRadiusTheme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="64dp"
             android:backgroundTint="#2b448c"
-            android:drawableLeft="@drawable/facebook_logo"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawableRight="@drawable/ic_facebook"
             android:text="@string/facebook" />
     </LinearLayout>
 

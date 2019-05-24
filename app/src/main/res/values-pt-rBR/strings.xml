@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ABCPokemon</string>
-    <string name="sign_in">Já sou cadastrado</string>
-    <string name="create_an_account">Cadastrar</string>
-    <string name="facebook">Facebook</string>
+    <string name="sign_in">L o g i n</string>
+    <string name="create_an_account">C a d a s t r a r</string>
+    <string name="facebook">F a c e b o o k</string>
 </resources>
