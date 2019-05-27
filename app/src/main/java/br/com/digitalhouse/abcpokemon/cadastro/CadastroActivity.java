@@ -54,19 +54,25 @@ public class CadastroActivity extends AppCompatActivity {
         }else if (!validateEmailFormat(email)){
             textInputLayoutEmail.setError(getString(R.string.invalid_mail));
             return;
+        }else {
+            textInputLayoutEmail.setError(null);
         }
 
         if (user.isEmpty()) {
-            textInputLayoutEmail.setError(getString(R.string.not_user));
+            textInputLayoutUser.setError(getString(R.string.not_user));
             return;
+        }else {
+            textInputLayoutUser.setError(null);
         }
 
         if (password.isEmpty()) {
             textInputLayoutPassword.setError(getString(R.string.not_password));
             return;
+        }else {
+            textInputLayoutPassword.setError(null);
         }
 
-        Snackbar.make(textInputLayoutEmail, R.string.successful_register, Snackbar.LENGTH_LONG)
+        Snackbar.make(btnRegister, R.string.successful_register, Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
 
     }
