@@ -57,7 +57,7 @@
         <Button
             android:id="@+id/btnLogin"
             style="@style/ButtonRadiusTheme"
-            android:backgroundTint="#f26e22"
+            android:backgroundTint="@color/orange_login"
             android:drawableLeft="@drawable/ic_pokeball"
             android:drawableRight="@drawable/ic_pokeball"
             android:text="@string/sign_in" />
@@ -67,14 +67,14 @@
             android:id="@+id/btnRegister"
             style="@style/ButtonRadiusTheme"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#f2a30f"
+            android:backgroundTint="@color/yellow_pokemon"
             android:text="@string/create_an_account" />
 
         <Button
             android:id="@+id/btnFacebook"
             style="@style/ButtonRadiusTheme"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#2b448c"
+            android:backgroundTint="@color/blue_facebook"
             android:drawableLeft="@drawable/ic_facebook"
             android:drawableRight="@drawable/ic_facebook"
             android:text="@string/facebook" />

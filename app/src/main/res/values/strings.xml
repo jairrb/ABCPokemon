@@ -3,4 +3,13 @@
     <string name="sign_in">Sign in</string>
     <string name="create_an_account">Create an account</string>
     <string name="facebook">Facebook</string>
+    <string name="email">E-mail</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="or">or</string>
+    <string name="not_email">Email not informed :(</string>
+    <string name="invalid_mail">Invalid email :(</string>
+    <string name="not_user">User not informed :(</string>
+    <string name="not_password">Password not informed :(</string>
+    <string name="successful_register">Register Successful :)</string>
 </resources>
