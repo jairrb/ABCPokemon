@@ -33,9 +33,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
-                    app:popupTheme="@style/AppTheme.PopupOverlay"
-                    app:title="@string/register"
-                    app:titleTextColor="@color/colorWhite"/>
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register"
+                        android:fontFamily="@font/pokemon_font"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorWhite"/>
+                </android.support.v7.widget.Toolbar>
 
             </android.support.design.widget.AppBarLayout>
 
