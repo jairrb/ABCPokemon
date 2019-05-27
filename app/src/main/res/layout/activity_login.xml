@@ -6,4 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".login.LoginActivity">
 
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_sec" />
+
+    <ImageView
+        android:id="@+id/imageAbc"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageBack"
+        app:layout_constraintStart_toStartOf="@+id/imageBack"
+        app:layout_constraintTop_toTopOf="@+id/imageBack"
+        app:srcCompat="@drawable/abc" />
+
+    <ImageView
+        android:id="@+id/imagePikachu"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageBack"
+        app:layout_constraintStart_toStartOf="@+id/imageBack"
+        app:layout_constraintTop_toTopOf="@+id/imageAbc"
+        app:srcCompat="@drawable/pikachu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBack"
+        app:layout_constraintEnd_toEndOf="@+id/imageBack"
+        app:layout_constraintStart_toStartOf="@+id/imageBack"
+        app:layout_constraintTop_toTopOf="@+id/imagePikachu">
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/ButtonRadiusTheme"
+            android:backgroundTint="@color/orange_login"
+            android:drawableLeft="@drawable/ic_pokeball"
+            android:drawableRight="@drawable/ic_pokeball"
+            android:text="@string/sign_in" />
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/ButtonRadiusTheme"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/yellow_pokemon"
+            android:text="@string/create_an_account" />
+
+        <Button
+            android:id="@+id/btnFacebook"
+            style="@style/ButtonRadiusTheme"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blue_facebook"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawableRight="@drawable/ic_facebook"
+            android:text="@string/facebook" />
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
