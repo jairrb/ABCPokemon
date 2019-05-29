@@ -13,19 +13,17 @@ import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
-
-    private ImageView imageSplash;
+    private ImageView splashPokemon;
     private Timer timer = new Timer();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        imageSplash = findViewById(R.id.splash_pokemon);
+        splashPokemon = findViewById(R.id.splashPokemon);
 
-       /* imageSplash.setOnClickListener(new View.OnClickListener() {
+        splashPokemon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 jump();
@@ -45,7 +43,6 @@ public class SplashActivity extends AppCompatActivity {
         Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
-    }*/
     }
-}
 
+}
