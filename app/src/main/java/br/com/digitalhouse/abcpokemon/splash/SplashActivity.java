@@ -1,5 +1,6 @@
 package br.com.digitalhouse.abcpokemon.splash;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+
+
+
         splashPokemon = findViewById(R.id.splashPokemon);
+
+
 
         splashPokemon.setOnClickListener(new View.OnClickListener() {
             @Override
