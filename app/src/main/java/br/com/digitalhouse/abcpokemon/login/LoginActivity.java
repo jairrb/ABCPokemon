@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
@@ -15,13 +17,14 @@ public class LoginActivity extends AppCompatActivity {
     Button btnRegister;
     Button btnFacebook;
 
-
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initViews();
+
+
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
