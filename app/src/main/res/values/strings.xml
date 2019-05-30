@@ -12,5 +12,8 @@
     <string name="not_user">User not informed :(</string>
     <string name="not_password">Password not informed :(</string>
     <string name="successful_register">Register Successful :)</string>
+    <string name="successful_login">Login Successful :)</string>
     <string name="register">Register</string>
+    <string name="invalid_user">Invalid User :(</string>
+    <string name="invalid_password">Invalid Password :(</string>
 </resources>

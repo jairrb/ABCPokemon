@@ -1,5 +1,6 @@
 package br.com.digitalhouse.abcpokemon.cadastro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -10,6 +11,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
+import br.com.digitalhouse.abcpokemon.login.LoginActivity;
+import br.com.digitalhouse.abcpokemon.model.Cadastro;
 
 public class CadastroActivity extends AppCompatActivity {
     TextInputLayout textInputLayoutEmail;
@@ -38,7 +41,7 @@ public class CadastroActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validateAndGoToHome();
+                validateAndGo();
 
             }
         });
@@ -53,7 +56,7 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
-    private void validateAndGoToHome() {
+    private void validateAndGo() {
         String email = textInputLayoutEmail.getEditText().getText().toString();
         String user = textInputLayoutUser.getEditText().getText().toString();
         String password = textInputLayoutPassword.getEditText().getText().toString();
@@ -83,9 +86,13 @@ public class CadastroActivity extends AppCompatActivity {
             textInputLayoutPassword.setError(null);
         }
 
-        Snackbar.make(btnRegister, R.string.successful_register, Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
-
+        Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
+        Cadastro cadastro = new Cadastro(email,user,password);
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("REGISTER",cadastro);
+        intent.putExtras(bundle);
+        startActivity(intent,bundle);
+        finish();
     }
 
     private void initViews() {
