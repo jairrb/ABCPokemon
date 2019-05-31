@@ -13,7 +13,7 @@
         <item name="android:background">@drawable/button_radius</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">@font/pokemon_font</item>
+        <item name="android:fontFamily">@font/roboto_font</item>
         <item name="android:layout_width">256dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
