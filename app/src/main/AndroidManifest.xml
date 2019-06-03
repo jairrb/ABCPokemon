@@ -15,15 +15,12 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".login.OpcoesLoginActivity" />
         <activity android:name=".login.LoginActivity" />
-        <activity
-            android:name=".splash.SplashActivity"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".cadastro.CadastroActivity" />
     </application>
