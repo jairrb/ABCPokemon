@@ -1,65 +1,99 @@
 package br.com.digitalhouse.abcpokemon.login;
 
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.cadastro.CadastroActivity;
+import br.com.digitalhouse.abcpokemon.model.Cadastro;
 
 public class LoginActivity extends AppCompatActivity {
+    TextInputLayout textInputLayoutUser;
+    TextInputLayout textInputLayoutPassword;
+
+    private String passwordbundle;
+    private String userbundle;
+
     Button btnLogin;
-    Button btnRegister;
     Button btnFacebook;
-
-     @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        initViews();
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_login);
+         getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.blue_facebook));
+
+         initViews();
+         checkIntent();
+
+         btnLogin.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 validateAndGo();
+
+             }
+         });
+
+         btnFacebook.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Snackbar.make(btnFacebook, "Botao facebook :)", Snackbar.LENGTH_LONG)
+                         .setAction("Action", null).show();
+
+             }
+         });
 
 
+     }
 
+    private void validateAndGo() {
+        String user = textInputLayoutUser.getEditText().getText().toString();
+        String password = textInputLayoutPassword.getEditText().getText().toString();
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(btnLogin, "Botao login :)", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        if (user.isEmpty()) {
+            textInputLayoutUser.setError(getString(R.string.not_user));
+            return;
+        }else if (userbundle != null && !user.equals(userbundle)){
+            textInputLayoutUser.setError(getString(R.string.invalid_user));
+            return;
+        }else {
+            textInputLayoutUser.setError(null);
+        }
 
+        if (password.isEmpty()) {
+            textInputLayoutPassword.setError(getString(R.string.not_password));
+            return;
+        }else if (passwordbundle != null && !password.equals(passwordbundle)){
+            textInputLayoutPassword.setError(getString(R.string.invalid_password));
+            return;
+        }else {
+            textInputLayoutPassword.setError(null);
+        }
+
+        Snackbar.make(btnLogin, R.string.successful_login, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+    }
+
+    private void checkIntent() {
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            Bundle bundle = getIntent().getExtras();
+            Cadastro cadastro = bundle.getParcelable("REGISTER");
+
+            if (cadastro != null) {
+                passwordbundle = cadastro.getPassword();
+                userbundle  = cadastro.getUser();
+                textInputLayoutUser.getEditText().setText(userbundle);
             }
-        });
-
-
-
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btnFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(btnFacebook, "Botao facebook :)", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-            }
-        });
-
-
+        }
     }
 
     private void initViews() {
+        textInputLayoutUser = findViewById(R.id.textInputLayoutUser);
+        textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        btnRegister = findViewById(R.id.btnRegister);
         btnFacebook = findViewById(R.id.btnFacebook);
     }
 }

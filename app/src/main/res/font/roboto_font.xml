@@ -6,16 +6,8 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="600"
-        android:font="@font/pokemon_solid"
+        android:font="@font/roboto_regular"
         app:fontStyle="normal"
         app:fontWeight="600"
-        app:font="@font/pokemon_solid"/>
-
-    <font
-        android:fontStyle="italic"
-        android:fontWeight="600"
-        android:font="@font/pokemon_hollow"
-        app:fontStyle="italic"
-        app:fontWeight="600"
-        app:font="@font/pokemon_hollow"/>
+        app:font="@font/roboto_regular"/>
 </font-family>

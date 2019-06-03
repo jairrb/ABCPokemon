@@ -1,17 +1,17 @@
 package br.com.digitalhouse.abcpokemon.splash;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.login.LoginActivity;
+import br.com.digitalhouse.abcpokemon.login.OpcoesLoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private ImageView splashPokemon;
@@ -22,12 +22,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
-
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         splashPokemon = findViewById(R.id.splashPokemon);
-
-
 
         splashPokemon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void jump() {
         timer.cancel();
-        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+        Intent intent = new Intent(SplashActivity.this, OpcoesLoginActivity.class);
         startActivity(intent);
         finish();
     }
