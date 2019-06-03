@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ABCPokemon</string>
     <string name="sign_in">Sign in</string>
-    <string name="create_an_account">Create an account</string>
+    <string name="create_an_account">Register</string>
     <string name="facebook">Facebook</string>
     <string name="email">E-mail</string>
     <string name="user">User</string>
