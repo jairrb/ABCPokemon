@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ABCPokemon</string>
+    <string name="sign_in">L o g i n</string>
+    <string name="create_an_account">C a d a s t r a r</string>
+    <string name="facebook">F a c e b o o k</string>
+    <string name="email">E-mail</string>
+    <string name="user">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="or">ou</string>
+    <string name="not_email">E-mail não informado :(</string>
+    <string name="invalid_mail">E-mail inválido :(</string>
+    <string name="not_user">Usuário não informado :(</string>
+    <string name="not_password">Senha não informada :(</string>
+    <string name="successful_register">Cadastro efetuado com sucesso :)</string>
+    <string name="successful_login">Login efetuado com sucesso :)</string>
+    <string name="register">C a d a s t r o</string>
+    <string name="invalid_user">Usuário invalido :(</string>
+    <string name="invalid_password">Senha invalida :(</string>
+</resources>

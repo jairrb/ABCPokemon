@@ -8,7 +8,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".login.LoginActivity"
+        tools:context=".cadastro.CadastroActivity"
         android:id="@+id/touch">
 
         <LinearLayout
@@ -35,7 +35,7 @@
                         android:id="@+id/toolbar_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sign_in"
+                        android:text="@string/register"
                         android:fontFamily="@font/pokemon_font"
                         android:textSize="13sp"
                         android:textColor="@color/colorWhite"/>
@@ -44,10 +44,24 @@
             </android.support.design.widget.AppBarLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/textInputLayoutUser"
+                android:id="@+id/textInputLayoutEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
@@ -70,15 +84,12 @@
                     android:inputType="textPassword" />
             </android.support.design.widget.TextInputLayout>
 
-
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnRegister"
                 style="@style/ButtonRadiusTheme"
                 android:layout_marginTop="48dp"
-                android:backgroundTint="@color/orange_login"
-                android:drawableLeft="@drawable/ic_pokeball"
-                android:drawableRight="@drawable/ic_pokeball"
-                android:text="@string/sign_in" />
+                android:backgroundTint="@color/yellow_pokemon"
+                android:text="@string/create_an_account" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
