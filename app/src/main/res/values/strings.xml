@@ -16,4 +16,7 @@
     <string name="register">Register</string>
     <string name="invalid_user">Invalid User :(</string>
     <string name="invalid_password">Invalid Password :(</string>
+    <string name="fast_game">Fast Game</string>
+    <string name="profile">Profile</string>
+    <string name="campaign">Campaign</string>
 </resources>

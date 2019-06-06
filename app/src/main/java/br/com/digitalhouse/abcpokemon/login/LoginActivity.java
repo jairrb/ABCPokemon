@@ -1,5 +1,6 @@
 package br.com.digitalhouse.abcpokemon.login;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
+import br.com.digitalhouse.abcpokemon.cadastro.CadastroActivity;
 import br.com.digitalhouse.abcpokemon.model.Cadastro;
 
 public class LoginActivity extends AppCompatActivity {
@@ -73,8 +75,8 @@ public class LoginActivity extends AppCompatActivity {
             textInputLayoutPassword.setError(null);
         }
 
-        Snackbar.make(btnLogin, R.string.successful_login, Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
+        Intent intent = new Intent(LoginActivity.this, OpcoesGameActivity.class);
+        startActivity(intent);
     }
 
     private void checkIntent() {

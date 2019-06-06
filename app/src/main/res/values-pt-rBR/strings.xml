@@ -17,4 +17,7 @@
     <string name="register">C a d a s t r o</string>
     <string name="invalid_user">Usuário invalido :(</string>
     <string name="invalid_password">Senha invalida :(</string>
+    <string name="fast_game">J o g o  R á p i d o</string>
+    <string name="profile">P e r f i l</string>
+    <string name="campaign">C a m p a n h a</string>
 </resources>
