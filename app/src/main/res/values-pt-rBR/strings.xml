@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ABCPokemon</string>
-    <string name="sign_in">L o g i n</string>
-    <string name="create_an_account">C a d a s t r a r</string>
-    <string name="facebook">F a c e b o o k</string>
+    <string name="sign_in">Login</string>
+    <string name="create_an_account">Cadastrar</string>
+    <string name="facebook">Facebook</string>
     <string name="email">E-mail</string>
     <string name="user">Usuário</string>
     <string name="password">Senha</string>
@@ -17,7 +17,8 @@
     <string name="register">C a d a s t r o</string>
     <string name="invalid_user">Usuário invalido :(</string>
     <string name="invalid_password">Senha invalida :(</string>
-    <string name="fast_game">J o g o  R á p i d o</string>
-    <string name="profile">P e r f i l</string>
-    <string name="campaign">C a m p a n h a</string>
+    <string name="fast_game">Jogo Rápido</string>
+    <string name="profile">Perfil</string>
+    <string name="campaign">Campanha</string>
+    <string name="next">Proximo</string>
 </resources>

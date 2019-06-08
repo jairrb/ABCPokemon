@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="@+id/imagePikachu">
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnFastGame"
             style="@style/ButtonRadiusTheme"
             android:backgroundTint="@color/orange_login"
             android:drawableLeft="@drawable/ic_pokeball"

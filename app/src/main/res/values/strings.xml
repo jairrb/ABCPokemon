@@ -19,4 +19,9 @@
     <string name="fast_game">Fast Game</string>
     <string name="profile">Profile</string>
     <string name="campaign">Campaign</string>
+    <string name="title_activity_game">GameActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
 </resources>
