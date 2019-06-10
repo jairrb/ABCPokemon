@@ -26,6 +26,10 @@
         <item name="android:fontFamily">@font/pokemon_solid</item>
     </style>
 
+    <style name="BackgroundMenuTop" parent="AppTheme">
+
+    </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

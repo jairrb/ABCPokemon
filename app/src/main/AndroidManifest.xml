@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".login.OpcoesLoginActivity"></activity>
+        <activity android:name=".menu_perfil.MenuPerfilActivity"></activity>
+        <activity android:name=".login.OpcoesLoginActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>

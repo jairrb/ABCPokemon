@@ -16,4 +16,13 @@
     <string name="register">Register</string>
     <string name="invalid_user">Invalid User :(</string>
     <string name="invalid_password">Invalid Password :(</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="redes_sociais">Redes Sociais</string>
+    <string name="alterar_foto">Alterar Foto</string>
+    <string name="sobre_o_app">Sobre o App</string>
+    <string name="sair">Sair</string>
+    <string name="sair">Sair</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
 </resources>
