@@ -60,8 +60,10 @@ public class GameFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_game, container, false);
 
         /*
+
         PokeApi pokeApi = new PokeApiClient();
         Pokemon bulbasaur = pokeApi.getPokemon(1);
+
         */
 
         initViews(view);
