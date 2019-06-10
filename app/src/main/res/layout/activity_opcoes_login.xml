@@ -69,6 +69,8 @@
             style="@style/ButtonRadiusTheme"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/yellow_pokemon"
+            android:drawableLeft="@drawable/ic_egg"
+            android:drawableRight="@drawable/ic_egg"
             android:text="@string/create_an_account" />
 
         <Button
