@@ -7,13 +7,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_abcpokemon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_abcpokemon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".login.LoginActivity"></activity>
+        <activity
+            android:name=".core.GameActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".login.OpcoesGameActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity" />
+        </activity>
+        <activity android:name=".login.OpcoesGameActivity" />
+        <activity android:name=".login.OpcoesLoginActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastro.CadastroActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".cadastro.CadastroActivity" />
     </application>
 
 </manifest>

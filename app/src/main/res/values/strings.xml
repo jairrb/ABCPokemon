@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ABCPokemon</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_an_account">Register</string>
+    <string name="facebook">Facebook</string>
+    <string name="email">E-mail</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="or">or</string>
+    <string name="not_email">Email not informed :(</string>
+    <string name="invalid_mail">Not a valid email address :(</string>
+    <string name="not_user">User not informed :(</string>
+    <string name="not_password">Password not informed :(</string>
+    <string name="successful_register">Register Successful :)</string>
+    <string name="successful_login">Login Successful :)</string>
+    <string name="register">Register</string>
+    <string name="invalid_user">Invalid User :(</string>
+    <string name="invalid_password">Invalid Password :(</string>
+    <string name="fast_game">Fast Game</string>
+    <string name="profile">Profile</string>
+    <string name="campaign">Campaign</string>
+    <string name="title_activity_game">GameActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
 </resources>
