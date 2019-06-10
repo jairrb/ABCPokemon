@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
         replaceFragment(new StartFragment());
     }
 
-    public void replaceFragment(Fragment fragment) {
+    private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, fragment)

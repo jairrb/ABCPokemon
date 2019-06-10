@@ -49,9 +49,10 @@ public class StartFragment extends Fragment {
 
                 textView.setText("START");
 
-                if(integration instanceof IntegrationFragment) {
+                if (integration instanceof IntegrationFragment) {
                     integration.integration(new GameFragment());
                 }
+
             }
         }.start();
 

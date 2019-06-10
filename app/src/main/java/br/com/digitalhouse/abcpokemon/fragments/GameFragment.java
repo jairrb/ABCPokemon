@@ -2,6 +2,7 @@ package br.com.digitalhouse.abcpokemon.fragments;
 
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
+import br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +20,6 @@ import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
 public class GameFragment extends Fragment {
     private IntegrationFragment integration;
     TextView textViewLetter;
-
 
 
     public GameFragment() {
@@ -47,13 +48,13 @@ public class GameFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if(integration instanceof IntegrationFragment) {
+                if (integration instanceof IntegrationFragment) {
                     integration.integration(new ResultFragment());
                 }
             }
+
         });
 
         return view;
     }
-
 }
