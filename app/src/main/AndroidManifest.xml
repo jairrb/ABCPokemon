@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".core.GameActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".login.OpcoesGameActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity" />
+        </activity>
+        <activity android:name=".login.OpcoesGameActivity" />
         <activity android:name=".login.OpcoesLoginActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".splash.SplashActivity">

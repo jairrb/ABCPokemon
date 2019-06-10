@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_game">30sp</dimen>
+    <dimen name="text_size_result">48sp</dimen>
+</resources>
