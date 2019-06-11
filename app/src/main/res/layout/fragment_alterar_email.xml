@@ -5,4 +5,100 @@
     android:layout_height="match_parent"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarEmailFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_dark_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_email"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/newEmail"
+                android:layout_width="280dp"
+                android:layout_marginStart="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_radius_two"
+                android:backgroundTint="@color/edittext_dark_blue"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_new_email"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/confirmNewEmail"
+            android:layout_width="280dp"
+            android:layout_marginStart="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_radius_two"
+            android:backgroundTint="@color/edittext_dark_blue"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="100dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:backgroundTint="@color/light_blue_background"
+            android:background="@drawable/button_radius_two"
+            android:textSize="24sp"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:text="@string/confirm"
+            />
+
+    </LinearLayout>
+
+
 </FrameLayout>

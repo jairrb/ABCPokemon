@@ -5,4 +5,90 @@
     android:layout_height="match_parent"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarFotoFragment">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_dark_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_photo"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/changeIconImageBtn"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="72dp"
+                android:src="@drawable/ic_more_horiz_black_24dp"
+                android:backgroundTint="@color/light_blue_background"
+                android:background="@drawable/button_radius_two"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_in_your_phone"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/searchPhoneImageBtn"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more_horiz_black_24dp"
+                android:backgroundTint="@color/light_blue_background"
+                android:background="@drawable/button_radius_two"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="100dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:backgroundTint="@color/light_blue_background"
+            android:background="@drawable/button_radius_two"
+            android:textSize="24sp"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:text="@string/confirm"
+            />
+
+    </LinearLayout>
+
+
 </FrameLayout>

@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </android.support.design.widget.AppBarLayout>
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,9 +39,11 @@
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/pikachu" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="2dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +58,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="4"
             android:background="@drawable/background_bottom_radius"
             android:orientation="vertical"
             android:padding="16dp">
@@ -67,20 +70,41 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/pokebola" />
+                    android:src="@drawable/ic_pokeball"/>
 
-                <Button
+                <TextView
+                    android:id="@+id/editProfileMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_radius"
-                    android:backgroundTint="@color/blue_dark_background"
-                    style="@style/AppTheme"
-                    android:text="@string/editar_perfil"
-                    android:textAllCaps="false"
+                    android:text="@string/edit_profile"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp" />
+                
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_pokeball"/>
+
+                <TextView
+                    android:id="@+id/socialMediaMP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:text="@string/social_media"
+                    android:layout_marginStart="16dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -93,23 +117,22 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/pokebola" />
+                    android:src="@drawable/ic_pokeball"/>
 
-                <Button
+
+                <TextView
+                    android:id="@+id/aboutUsMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_radius"
-                    android:backgroundTint="@color/blue_dark_background"
-                    android:text="@string/redes_sociais"
-                    android:textAllCaps="false"
+                   android:text="@string/about_us"
+                    android:layout_marginStart="16dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="24sp" />
-            </LinearLayout>
 
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -118,48 +141,20 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/pokebola" />
+                    android:src="@drawable/ic_pokeball"/>
 
-                <Button
+                <TextView
+                    android:id="@+id/exitMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_radius"
-                    android:backgroundTint="@color/blue_dark_background"
-                    android:text="@string/sobre_o_app"
-                    android:textAllCaps="false"
+                    android:text="@string/exit"
+                    android:layout_marginStart="16dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="24sp" />
-            </LinearLayout>
 
-            ]
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/pokebola" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_radius"
-                    android:backgroundTint="@color/blue_dark_background"
-                    android:text="@string/sair"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp" />
             </LinearLayout>
 
         </LinearLayout>

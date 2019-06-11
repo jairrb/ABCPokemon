@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_perfil.menu_perfil_fragments.AlterarSenhaFragment">
-
+    tools:context=".menu_perfil.menu_perfil_fragments.EditarPerfilFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +15,26 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:id="@+id/changePasswordEP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,29 +49,16 @@
                 android:src="@drawable/ic_pokeball"/>
 
             <TextView
+                android:id="@+id/changeEmailEP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/old_password"
+                android:text="@string/change_email"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="24sp" />
 
-          </LinearLayout>
-
-            <EditText
-                android:id="@+id/oldPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
-
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -68,27 +73,15 @@
                 android:src="@drawable/ic_pokeball"/>
 
             <TextView
+                android:id="@+id/changePhotoEP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/new_password"
+                android:text="@string/change_photo"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="24sp" />
-        </LinearLayout>
 
-            <EditText
-                android:id="@+id/newPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -102,38 +95,39 @@
                 android:layout_height="36dp"
                 android:src="@drawable/ic_pokeball"/>
 
-
             <TextView
+                android:id="@+id/changeLanguageEP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/confirm_new_password"
+                android:text="@string/change_language"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="24sp" />
-        </LinearLayout>
-
-            <EditText
-                android:id="@+id/confirmNewPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
 
         </LinearLayout>
 
-        <Button
-            android:layout_marginTop="100dp"
-            android:layout_width="280dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:backgroundTint="@color/light_blue_background"
-            android:background="@drawable/button_radius_two"
-            android:textSize="24sp"
-            android:textColor="@color/colorWhite"
-            android:textAllCaps="false"
-            android:text="@string/confirm"
-            />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_pokeball"/>
+
+            <TextView
+                android:id="@+id/exitEP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exit"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

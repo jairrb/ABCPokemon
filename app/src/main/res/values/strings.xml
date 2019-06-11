@@ -16,13 +16,28 @@
     <string name="register">Register</string>
     <string name="invalid_user">Invalid User :(</string>
     <string name="invalid_password">Invalid Password :(</string>
-    <string name="editar_perfil">Editar Perfil</string>
-    <string name="redes_sociais">Redes Sociais</string>
-    <string name="alterar_foto">Alterar Foto</string>
-    <string name="sobre_o_app">Sobre o App</string>
-    <string name="sair">Sair</string>
-    <string name="sair">Sair</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="social_media">Social Media</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="about_us">About Us</string>
+    <string name="exit">Exit</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_email">Change E-mail</string>
+    <string name="change_icon">Change Icon</string>
+    <string name="change_language">Change Language</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="new_email">New E-mail</string>
+    <string name="confirm_new_email">Confirm New E-mail</string>
+    <string name="select_icon">Select Icon</string>
+    <string name="search_in_your_phone">Search in your phone</string>
+    <string name="english">english</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="select_language">Select Language</string>
+    <string name="confirm">Confirm</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
+
 
 </resources>
