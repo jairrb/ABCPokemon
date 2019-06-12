@@ -1,0 +1,100 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragments.ShareFragment">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialFacebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_social_facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialWhatsApp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_social_whatsapp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSocialYouTube"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSocialFacebook"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialYouTube"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_social_youtube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialGoogle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_social_google"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSocialSnapChat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSocialFacebook" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialInstagram"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_social_instagram"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSocialReddit"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSocialTwitter"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSocialGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSocialWhatsApp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialTwitter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_social_twitter"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSocialGmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSocialYouTube" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialSnapChat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_social_snapchat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialReddit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_social_reddit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSocialGmail"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSocialSnapChat" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewSocialGmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_social_gmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

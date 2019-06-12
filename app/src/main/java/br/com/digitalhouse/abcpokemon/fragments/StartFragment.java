@@ -20,6 +20,7 @@ import br.com.digitalhouse.abcpokemon.R;
  */
 public class StartFragment extends Fragment {
     private IntegrationFragment integration;
+    private CountDownTimer countDownTimer;
 
     public StartFragment() {
         // Required empty public constructor
@@ -42,7 +43,7 @@ public class StartFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_start, container, false);
         final TextView textView = view.findViewById(R.id.textView2);
 
-        new CountDownTimer(4000, 1000) {
+        countDownTimer = new CountDownTimer(4000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 textView.setText(String.valueOf(millisUntilFinished / 1000));
@@ -71,6 +72,7 @@ public class StartFragment extends Fragment {
     public void onStop() {
         super.onStop();
         ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+        countDownTimer.cancel();
     }
 
 }

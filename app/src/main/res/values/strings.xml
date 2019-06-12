@@ -19,9 +19,10 @@
     <string name="fast_game">Fast Game</string>
     <string name="profile">Profile</string>
     <string name="campaign">Campaign</string>
-    <string name="title_activity_game">GameActivity</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="next">Next</string>
+    <string name="share">Share</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="exit">Exit</string>
 </resources>

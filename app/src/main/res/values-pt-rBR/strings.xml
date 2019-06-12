@@ -21,4 +21,9 @@
     <string name="profile">Perfil</string>
     <string name="campaign">Campanha</string>
     <string name="next">Proximo</string>
+    <string name="share">Compartilhar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="exit">Sair</string>
 </resources>

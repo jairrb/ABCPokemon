@@ -1,6 +1,7 @@
 package br.com.digitalhouse.abcpokemon.fragments;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
@@ -61,6 +61,15 @@ public class ResultFragment extends Fragment {
             public void onClick(View v) {
                 if(integration instanceof IntegrationFragment) {
                     integration.integration(new StartFragment());
+                }
+            }
+        });
+
+        imageViewShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(integration instanceof IntegrationFragment) {
+                    integration.integration(new ShareFragment());
                 }
             }
         });

@@ -9,10 +9,12 @@ import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.core.GameActivity;
+import br.com.digitalhouse.abcpokemon.core.ProfileActivity;
 
 public class OpcoesGameActivity extends AppCompatActivity {
     Button btnFastGame;
     Button btnCampaign;
+    Button btnProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,19 @@ public class OpcoesGameActivity extends AppCompatActivity {
             }
         });
 
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OpcoesGameActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     private void initViews() {
         btnFastGame = findViewById(R.id.btnFastGame);
         btnCampaign = findViewById(R.id.btnCampaign);
+        btnProfile = findViewById(R.id.btnProfile);
     }
 }
