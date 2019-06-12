@@ -2,6 +2,7 @@ package br.com.digitalhouse.abcpokemon.core;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -19,7 +20,7 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        replaceFragment(new StartFragment());
+         replaceFragment(new StartFragment());
     }
 
     private void replaceFragment(Fragment fragment) {
