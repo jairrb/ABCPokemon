@@ -12,6 +12,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -60,11 +61,11 @@
 
         </LinearLayout>
 
+
         <LinearLayout
-            android:id="@+id/conteudo"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_height="wrap_content"
+
             android:background="@drawable/background_bottom_radius"
             android:orientation="vertical"
             android:padding="16dp">
@@ -165,9 +166,8 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
-
 
 </ScrollView>

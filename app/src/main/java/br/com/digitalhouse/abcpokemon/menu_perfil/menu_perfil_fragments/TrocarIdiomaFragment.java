@@ -32,7 +32,7 @@ public class TrocarIdiomaFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup conteudo, @Nullable Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.fragment_alterar_senha, conteudo, false);
+        View view = inflater.inflate(R.layout.fragment_trocar_idioma, conteudo, false);
 
         btnConfirmarIdioma = view.findViewById(R.id.confirmarNovoIdioma);
 

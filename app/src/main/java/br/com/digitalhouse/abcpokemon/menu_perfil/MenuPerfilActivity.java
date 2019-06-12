@@ -1,6 +1,7 @@
 package br.com.digitalhouse.abcpokemon.menu_perfil;
 
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -30,8 +31,9 @@ public class MenuPerfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                replaceFragment(new EditarPerfilFragment());
+               // startActivity(new Intent(MenuPerfilActivity.this, EditarPerfilFragment.class));
 
+                replaceFragment(new EditarPerfilFragment());
             }
         });
     }

@@ -42,7 +42,7 @@ public class AlterarEmailFragment extends Fragment {
         novoEmailET = view.findViewById(R.id.newEmail);
         confirmarNovoEmailET = view.findViewById(R.id.confirmNewEmail);
 
-        btnConfirmarEmail.setOnClickListener(new View.OnClickListener() {
+      /*  btnConfirmarEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -69,7 +69,7 @@ public class AlterarEmailFragment extends Fragment {
                 replaceFragment(R.id.fragment_aemail, new EditarPerfilFragment());
 
             }
-        });
+        });*/
 
         return view;
     }
