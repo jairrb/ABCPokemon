@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_asenha"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarSenhaFragment">
 
 
@@ -45,6 +46,10 @@
                 android:layout_width="280dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="50dp"
+                android:textColor="@color/colorWhite"
+                android:paddingStart="16dp"
+                android:textSize="24sp"
+                android:inputType="textPassword"
                 android:background="@drawable/button_radius_two"
                 android:backgroundTint="@color/edittext_dark_blue"/>
 
@@ -81,6 +86,10 @@
                 android:layout_width="280dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="50dp"
+                android:textColor="@color/colorWhite"
+                android:paddingStart="16dp"
+                android:textSize="24sp"
+                android:inputType="textPassword"
                 android:background="@drawable/button_radius_two"
                 android:backgroundTint="@color/edittext_dark_blue"/>
         </LinearLayout>
@@ -117,12 +126,17 @@
                 android:layout_width="280dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="50dp"
+                android:textColor="@color/colorWhite"
+                android:paddingStart="16dp"
+                android:textSize="24sp"
+                android:inputType="textPassword"
                 android:background="@drawable/button_radius_two"
                 android:backgroundTint="@color/edittext_dark_blue"/>
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/confirmarSenha"
             android:layout_marginTop="100dp"
             android:layout_width="280dp"
             android:layout_height="wrap_content"

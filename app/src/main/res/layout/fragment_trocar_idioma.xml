@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_tidioma"
     tools:context=".menu_perfil.menu_perfil_fragments.TrocarIdiomaFragment">
 
 
@@ -50,6 +51,7 @@
             />
 
         <Button
+            android:id="@+id/confirmarNovoIdioma"
             android:layout_marginTop="100dp"
             android:layout_width="280dp"
             android:layout_height="wrap_content"

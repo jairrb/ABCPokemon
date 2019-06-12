@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_afoto"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarFotoFragment">
 
 
@@ -76,6 +77,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/confirmarNovoIcone"
             android:layout_marginTop="100dp"
             android:layout_width="280dp"
             android:layout_height="wrap_content"

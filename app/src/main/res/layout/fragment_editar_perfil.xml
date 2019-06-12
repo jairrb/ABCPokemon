@@ -2,13 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_ep"
     tools:context=".menu_perfil.menu_perfil_fragments.EditarPerfilFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_dark_background"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_bottom_radius"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -100,29 +101,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/change_language"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_pokeball"/>
-
-            <TextView
-                android:id="@+id/exitEP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/exit"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="24sp" />
