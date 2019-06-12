@@ -14,24 +14,38 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".core.ProfileActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".core.GameActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".login.OpcoesGameActivity">
+            android:parentActivityName=".login.OpcoesGameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity" />
         </activity>
-        <activity android:name=".login.OpcoesGameActivity" />
-        <activity android:name=".login.OpcoesLoginActivity" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".splash.SplashActivity">
+        <activity
+            android:name=".login.OpcoesGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.OpcoesLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastro.CadastroActivity" />
+        <activity
+            android:name=".cadastro.CadastroActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

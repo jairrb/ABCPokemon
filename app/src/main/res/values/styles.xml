@@ -38,13 +38,13 @@
         <item name="colorPrimary">@color/blue_facebook</item>
         <item name="colorPrimaryDark">@color/blue_facebook</item>
         <item name="colorAccent">@color/blue_facebook</item>
-        <item name="android:fontFamily">@font/pokemon_solid</item>
+        <item name="android:fontFamily">@font/roboto_font</item>
     </style>
     <style name="AppTheme.PopupOverlayBlue" parent="ThemeOverlay.AppCompat.Light">
         <item name="colorPrimary">@color/blue_facebook</item>
         <item name="colorPrimaryDark">@color/blue_facebook</item>
         <item name="colorAccent">@color/blue_facebook</item>
-        <item name="android:fontFamily">@font/pokemon_solid</item>
+        <item name="android:fontFamily">@font/roboto_font</item>
     </style>
 
 </resources>
