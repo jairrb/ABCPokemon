@@ -1,10 +1,13 @@
 package br.com.digitalhouse.abcpokemon.cadastro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -12,7 +15,6 @@ import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.login.LoginActivity;
-import br.com.digitalhouse.abcpokemon.model.Cadastro;
 
 public class CadastroActivity extends AppCompatActivity {
     TextInputLayout textInputLayoutEmail;
@@ -27,7 +29,12 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
+        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.blue_facebook));
+
         initViews();
+
+        final SharedPreferences preferences = getSharedPreferences("APP_REGISTER", MODE_PRIVATE);
+
         findViewById(R.id.touch).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -41,7 +48,7 @@ public class CadastroActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validateAndGo();
+                validateAndGo(preferences);
 
             }
         });
@@ -56,7 +63,8 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
-    private void validateAndGo() {
+    //validação do cadastro
+    private void validateAndGo(SharedPreferences preferences) {
         String email = textInputLayoutEmail.getEditText().getText().toString();
         String user = textInputLayoutUser.getEditText().getText().toString();
         String password = textInputLayoutPassword.getEditText().getText().toString();
@@ -87,14 +95,15 @@ public class CadastroActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
-        Cadastro cadastro = new Cadastro(email,user,password);
-        Bundle bundle = new Bundle();
-        bundle.putParcelable("REGISTER",cadastro);
-        intent.putExtras(bundle);
-        startActivity(intent,bundle);
+
+        preferences.edit().putString("EMAIL",email).commit();
+        preferences.edit().putString("USER",user).commit();
+        preferences.edit().putString("PASSWORD",encrypt(password)).commit();
+        startActivity(intent);
         finish();
     }
 
+    //inicialização das views
     private void initViews() {
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
         textInputLayoutUser = findViewById(R.id.textInputLayoutUser);
@@ -104,10 +113,16 @@ public class CadastroActivity extends AppCompatActivity {
         btnFacebook = findViewById(R.id.btnFacebook);
     }
 
+    //validacao formato e-mail
     private boolean validateEmailFormat(final String email) {
         if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             return true;
         }
         return false;
+    }
+
+    //criptografia para senha
+    public String encrypt(String input) {
+        return Base64.encodeToString(input.getBytes(), Base64.DEFAULT);
     }
 }

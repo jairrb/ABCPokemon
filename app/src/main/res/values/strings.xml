@@ -16,6 +16,14 @@
     <string name="register">Register</string>
     <string name="invalid_user">Invalid User :(</string>
     <string name="invalid_password">Invalid Password :(</string>
+    <string name="fast_game">Fast Game</string>
+    <string name="profile">Profile</string>
+    <string name="campaign">Campaign</string>
+    <string name="next">Next</string>
+    <string name="share">Share</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_game">GameActivity</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="social_media">Social Media</string>
     <string name="change_photo">Change Photo</string>
@@ -36,6 +44,7 @@
     <string name="portuguese">Portuguese</string>
     <string name="select_language">Select Language</string>
     <string name="confirm">Confirm</string>
+
 
 
 

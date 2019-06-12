@@ -13,10 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".menu_perfil.MenuPerfilActivity"></activity>
-        <activity android:name=".login.OpcoesLoginActivity" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".splash.SplashActivity">
+        <activity
+            android:name=".core.ProfileActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".core.GameActivity"
+            android:parentActivityName=".login.OpcoesGameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity" />
+        </activity>
+        <activity android:name=".menu_perfil.MenuPerfilActivity"/>
+        <activity
+            android:name=".login.OpcoesGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.OpcoesLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

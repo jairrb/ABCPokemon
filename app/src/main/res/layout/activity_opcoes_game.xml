@@ -56,31 +56,31 @@
         app:layout_constraintTop_toTopOf="@+id/imagePikachu">
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnFastGame"
             style="@style/ButtonRadiusTheme"
             android:backgroundTint="@color/orange_login"
             android:drawableLeft="@drawable/ic_pokeball"
             android:drawableRight="@drawable/ic_pokeball"
-            android:text="@string/sign_in" />
+            android:text="@string/fast_game" />
 
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnProfile"
             style="@style/ButtonRadiusTheme"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/yellow_pokemon"
-            android:drawableLeft="@drawable/ic_egg"
-            android:drawableRight="@drawable/ic_egg"
-            android:text="@string/create_an_account" />
+            android:drawableLeft="@drawable/ic_profile"
+            android:drawableRight="@drawable/ic_profile"
+            android:text="@string/profile" />
 
         <Button
-            android:id="@+id/btnFacebook"
+            android:id="@+id/btnCampaign"
             style="@style/ButtonRadiusTheme"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/blue_facebook"
-            android:drawableLeft="@drawable/ic_facebook"
-            android:drawableRight="@drawable/ic_facebook"
-            android:text="@string/facebook" />
+            android:drawableLeft="@drawable/ic_campaign"
+            android:drawableRight="@drawable/ic_campaign"
+            android:text="@string/campaign" />
     </LinearLayout>
 
 
