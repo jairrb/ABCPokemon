@@ -9,4 +9,7 @@
     <color name="gray_divider">#A8A8A8</color>
     <color name="orange_login">#f26e22</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="blue_dark_background">#25488D</color>
+    <color name="light_blue_background">#5D85D4</color>
+    <color name="edittext_dark_blue">#1A3364</color>
 </resources>

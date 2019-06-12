@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".login.LoginActivity"
-        android:id="@+id/touch">
+        android:id="@+id/touch"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
-                    app:popupTheme="@style/AppTheme.PopupOverlay">
+                    app:popupTheme="@style/AppTheme.PopupOverlayBlue">
                     <TextView
                         android:id="@+id/toolbar_title"
                         android:layout_width="wrap_content"

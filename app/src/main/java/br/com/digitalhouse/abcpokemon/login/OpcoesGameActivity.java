@@ -10,6 +10,7 @@ import android.widget.Button;
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.core.GameActivity;
 import br.com.digitalhouse.abcpokemon.core.ProfileActivity;
+import br.com.digitalhouse.abcpokemon.menu_perfil.MenuPerfilActivity;
 
 public class OpcoesGameActivity extends AppCompatActivity {
     Button btnFastGame;
@@ -45,7 +46,7 @@ public class OpcoesGameActivity extends AppCompatActivity {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpcoesGameActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(OpcoesGameActivity.this, MenuPerfilActivity.class);
                 startActivity(intent);
             }
         });
