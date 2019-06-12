@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.cadastro.CadastroActivity;
 
 public class LoginActivity extends AppCompatActivity {
     TextInputLayout textInputLayoutUser;
@@ -22,33 +22,35 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
     Button btnFacebook;
-     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_login);
 
-         initViews();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.blue_facebook));
+
+        initViews();
+        preferences();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validateAndGo();
 
-             }
-         });
+            }
+        });
 
-         btnFacebook.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Snackbar.make(btnFacebook, "Botao facebook :)", Snackbar.LENGTH_LONG)
-                         .setAction("Action", null).show();
+        btnFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(btnFacebook, "Botao facebook :)", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
 
-             }
-         });
+            }
+        });
 
 
-     }
-
+    }
 
     private void validateAndGo() {
         String user = textInputLayoutUser.getEditText().getText().toString();
@@ -84,7 +86,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this, OpcoesGameActivity.class);
         startActivity(intent);
     }
-
 
     private void preferences() {
         final SharedPreferences preferences = getSharedPreferences("APP_REGISTER", MODE_PRIVATE);
