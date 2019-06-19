@@ -45,5 +45,6 @@
     <string name="portuguese">Português</string>
     <string name="select_language">Selecionar Idioma</string>
     <string name="confirm">Confirmar</string>
+    <string name="returnbtn">Voltar</string>
 
 </resources>
