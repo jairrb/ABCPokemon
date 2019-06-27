@@ -15,14 +15,12 @@ import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.fragments.StartFragment;
 
 public class GameActivity extends AppCompatActivity  implements IntegrationFragment {
-    private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         replaceFragment(new StartFragment());
     }
@@ -56,7 +54,6 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
                 .beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();
-
     }
 
     private void replaceFragmentStack(Fragment fragment) {
@@ -65,13 +62,13 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
                 .replace(R.id.container, fragment)
                 .addToBackStack("FRAGMENTS")
                 .commit();
-
     }
 
     @Override
     public void integration(Fragment fragment) {
         replaceFragment(fragment);
     }
+
     public void integrationStack(Fragment fragment) {
         replaceFragmentStack(fragment);
     }
