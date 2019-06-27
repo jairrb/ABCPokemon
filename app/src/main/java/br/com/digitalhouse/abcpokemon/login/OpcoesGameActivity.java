@@ -50,12 +50,12 @@ public class OpcoesGameActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
+
     private void initViews() {
         btnFastGame = findViewById(R.id.btnFastGame);
         btnCampaign = findViewById(R.id.btnCampaign);
         btnProfile = findViewById(R.id.btnProfile);
     }
+
 }

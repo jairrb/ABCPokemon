@@ -78,11 +78,13 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(integration instanceof IntegrationFragment) {
-                    integration.integration(new FavoriteFragment());
+                    integration.integrationStack(new FavoriteFragment());
                 }
             }
         });
 
         return view;
     }
+
+
 }

@@ -4,4 +4,5 @@ import android.support.v4.app.Fragment;
 
 public interface IntegrationFragment {
     void integration(Fragment fragment);
+    void integrationStack(Fragment fragment);
 }

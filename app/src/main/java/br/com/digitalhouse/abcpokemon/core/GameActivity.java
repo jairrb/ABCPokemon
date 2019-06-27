@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -25,27 +24,7 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        /*
-        drawer = findViewById(R.id.drawer_layout);
-
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        */
-
         replaceFragment(new StartFragment());
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 
     @Override
@@ -80,8 +59,20 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
 
     }
 
+    private void replaceFragmentStack(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack("FRAGMENTS")
+                .commit();
+
+    }
+
     @Override
     public void integration(Fragment fragment) {
         replaceFragment(fragment);
+    }
+    public void integrationStack(Fragment fragment) {
+        replaceFragmentStack(fragment);
     }
 }

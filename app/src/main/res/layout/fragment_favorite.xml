@@ -28,7 +28,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnReturn"
             style="@style/ButtonRadiusTheme"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/yellow_pokemon"
