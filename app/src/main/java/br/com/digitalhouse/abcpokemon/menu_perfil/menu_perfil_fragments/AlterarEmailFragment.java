@@ -38,30 +38,34 @@ public class AlterarEmailFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_alterar_email, conteudo, false);
 
-        btnConfirmarEmail = view.findViewById(R.id.confirmarSenha);
+        btnConfirmarEmail = view.findViewById(R.id.btnConfirmNemail);
         novoEmailET = view.findViewById(R.id.newEmail);
         confirmarNovoEmailET = view.findViewById(R.id.confirmNewEmail);
 
-      /*  btnConfirmarEmail.setOnClickListener(new View.OnClickListener() {
+        btnConfirmarEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (novoEmailET.getText().toString().isEmpty() || confirmarNovoEmailET.getText().toString().isEmpty())
-                {
-                    Snackbar.make(v,"Preencha o campo e-mail!",Snackbar.LENGTH_SHORT).show();
-                    if (novoEmailET.getText().toString().isEmpty())
-                    {
-                    novoEmailET.requestFocus();
+                if (novoEmailET.getText().toString().isEmpty() || confirmarNovoEmailET.getText().toString().isEmpty()) {
+                    Snackbar.make(v, "Preencha o campo e-mail!", Snackbar.LENGTH_SHORT).show();
+                    if (novoEmailET.getText().toString().isEmpty()) {
+                        novoEmailET.requestFocus();
                     }
-                    if (confirmarNovoEmailET.getText().toString().isEmpty())
-                    {
+                    if (confirmarNovoEmailET.getText().toString().isEmpty()) {
                         confirmarNovoEmailET.requestFocus();
                     }
                     return;
                 }
-                if (!novoEmailET.getText().toString().equals(confirmarNovoEmailET.getText().toString()))
-                {
-                    Snackbar.make(v,"E-mail não são iguais!",Snackbar.LENGTH_SHORT).show();
+                if (!validateEmailFormat(novoEmailET)) {
+                    novoEmailET.setError(getString(R.string.invalid_mail));
+                    return;
+                }
+                 if (!validateEmailFormat(confirmarNovoEmailET)) {
+                    confirmarNovoEmailET.setError(getString(R.string.invalid_mail));
+                    return;
+                }
+                if (!novoEmailET.getText().toString().equals(confirmarNovoEmailET.getText().toString())) {
+                    Snackbar.make(v, "E-mails não são iguais!", Snackbar.LENGTH_SHORT).show();
                     novoEmailET.requestFocus();
                     return;
                 }
@@ -69,16 +73,28 @@ public class AlterarEmailFragment extends Fragment {
                 replaceFragment(R.id.fragment_aemail, new EditarPerfilFragment());
 
             }
-        });*/
+        });
 
         return view;
     }
 
     public void replaceFragment(int conteudo, Fragment fragmento) {
+
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(conteudo, fragmento, "TrocarFragmento").commit();
+        transaction.setCustomAnimations(R.anim.transaction_fragment_enter, R.anim.transaction_fragment_exit,
+                R.anim.transaction_fragment_popenter, R.anim.transaction_fragment_pop_exit);
+        transaction.replace(conteudo, fragmento, "TrocarFragmentoAS").commit();
+        transaction.addToBackStack(null);
 
+    }
+
+    private boolean validateEmailFormat(EditText email) {
+        String emails = email.getText().toString();
+        if (android.util.Patterns.EMAIL_ADDRESS.matcher(emails).matches()) {
+            return true;
+        }
+        return false;
     }
 }
 

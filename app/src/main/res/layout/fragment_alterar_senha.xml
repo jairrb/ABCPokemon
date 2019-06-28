@@ -1,155 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/fragment_asenha"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarSenhaFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_dark_background"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="300dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background_bottom_radius"
             android:gravity="center"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_pokeball"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/old_password"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
+                android:gravity="left"
+                android:orientation="vertical">
 
-          </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/oldPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/colorWhite"
-                android:paddingStart="16dp"
-                android:textSize="24sp"
-                android:inputType="textPassword"
-                android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_pokeball" />
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/new_password"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <EditText
+                    android:id="@+id/newPassword"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_radius_two"
+                    android:backgroundTint="@color/edittext_dark_blue"
+                    android:inputType="textPassword"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_pokeball"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/new_password"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
-        </LinearLayout>
+                android:gravity="left"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/newPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/colorWhite"
-                android:paddingStart="16dp"
-                android:textSize="24sp"
-                android:inputType="textPassword"
-                android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_pokeball"/>
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_pokeball" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/confirm_new_password"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/confirmNewPassword"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_radius_two"
+                    android:backgroundTint="@color/edittext_dark_blue"
+                    android:inputType="textPassword"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConfirmarSenha"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/confirm_new_password"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-            <EditText
-                android:id="@+id/confirmNewPassword"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
-                android:textColor="@color/colorWhite"
-                android:paddingStart="16dp"
-                android:textSize="24sp"
-                android:inputType="textPassword"
+                android:layout_marginTop="32dp"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:background="@drawable/button_radius_two"
-                android:backgroundTint="@color/edittext_dark_blue"/>
-
+                android:backgroundTint="@color/light_blue_background"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/confirmarSenha"
-            android:layout_marginTop="100dp"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:backgroundTint="@color/light_blue_background"
-            android:background="@drawable/button_radius_two"
-            android:textSize="24sp"
-            android:textColor="@color/colorWhite"
-            android:textAllCaps="false"
-            android:text="@string/confirm"
-            />
 
     </LinearLayout>
-
 
 </FrameLayout>

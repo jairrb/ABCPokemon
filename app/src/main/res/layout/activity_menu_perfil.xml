@@ -13,160 +13,159 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/light_blue_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </android.support.design.widget.AppBarLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="32dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_top_radius"
-            android:backgroundTint="@color/light_blue_background"
-            android:gravity="center">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_person_black_24dp"
-                app:civ_border_color="@color/colorWhite"
-                app:civ_border_width="2dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Olá, Usuário"
-                android:textColor="@color/colorWhite"
-                android:textSize="24dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/conteudo"
-            android:background="@drawable/background_bottom_radius"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:theme="@style/AppTheme.AppBarOverlayBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="16dp">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:fontFamily="@font/roboto_font"
+                android:textSize="13sp"
+                app:popupTheme="@style/AppTheme.PopupOverlayBlue" />
 
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_pokeball"/>
+        </android.support.design.widget.AppBarLayout>
 
-                <TextView
-                    android:id="@+id/editProfileMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/edit_profile"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp" />
-                
-            </LinearLayout>
+        <FrameLayout
+            android:id="@+id/conteudoTodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu">
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="16dp">
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_pokeball"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_top_radius"
+                    android:backgroundTint="@color/light_blue_background"
+                    android:gravity="center">
 
-                <TextView
-                    android:id="@+id/socialMediaMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                   android:text="@string/social_media"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@mipmap/ic_face_pikachu"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="Olá, Usuário"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/conteudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/background_bottom_radius"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_pokeball" />
+
+                            <TextView
+                                android:id="@+id/editProfileMP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/edit_profile"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_pokeball" />
+
+                            <TextView
+                                android:id="@+id/aboutUsMP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/about_us"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_pokeball" />
+
+                            <TextView
+                                android:id="@+id/exitMP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/exit"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_pokeball"/>
-
-
-                <TextView
-                    android:id="@+id/aboutUsMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                   android:text="@string/about_us"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_pokeball"/>
-
-                <TextView
-                    android:id="@+id/exitMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/exit"
-                    android:layout_marginStart="16dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        </LinearLayout>
+        </FrameLayout>
 
     </android.support.constraint.ConstraintLayout>
 

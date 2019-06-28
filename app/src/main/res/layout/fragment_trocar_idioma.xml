@@ -1,69 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_tidioma"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_tidioma"
     tools:context=".menu_perfil.menu_perfil_fragments.TrocarIdiomaFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_dark_background"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="300dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_bottom_radius"
             android:gravity="center"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_pokeball"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="@string/select_language"
-                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_pokeball" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/portugues"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="4dp"
+                        android:gravity="right">
+
+                        <Button
+                            android:id="@+id/trocarParaPortugues"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/button_radius"
+                            android:backgroundTint="@color/edittext_dark_blue" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_pokeball" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/ingles"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="4dp"
+                        android:gravity="right">
+
+                        <Button
+                            android:id="@+id/trocarParaIngles"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/button_radius"
+                            android:backgroundTint="@color/edittext_dark_blue" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/confirmarNovoIdioma"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/button_radius_two"
+                android:backgroundTint="@color/light_blue_background"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
-
-
-
-        <Button
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:backgroundTint="@color/light_blue_background"
-            android:background="@drawable/button_radius_two"
-            android:textSize="24sp"
-            android:textColor="@color/colorWhite"
-            android:textAllCaps="false"
-            android:text="Português"
-            />
-
-        <Button
-            android:id="@+id/confirmarNovoIdioma"
-            android:layout_marginTop="100dp"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:backgroundTint="@color/light_blue_background"
-            android:background="@drawable/button_radius_two"
-            android:textSize="24sp"
-            android:textColor="@color/colorWhite"
-            android:textAllCaps="false"
-            android:text="@string/confirm"
-            />
-
-        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

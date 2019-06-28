@@ -43,10 +43,10 @@ public class ShareFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup conteudoTodo,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_share, container, false);
+        View view = inflater.inflate(R.layout.fragment_share, conteudoTodo, false);
 
         initViews(view);
 

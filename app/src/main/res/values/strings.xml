@@ -26,7 +26,7 @@
     <string name="title_activity_game">GameActivity</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="social_media">Social Media</string>
-    <string name="change_photo">Change Photo</string>
+    <string name="change_photo">Change Icon</string>
     <string name="about_us">About Us</string>
     <string name="exit">Exit</string>
     <string name="change_password">Change Password</string>
@@ -35,19 +35,16 @@
     <string name="change_language">Change Language</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
-    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="confirm_new_password">Confirm Password</string>
     <string name="new_email">New E-mail</string>
-    <string name="confirm_new_email">Confirm New E-mail</string>
+    <string name="confirm_new_email">Confirm E-mail</string>
     <string name="select_icon">Select Icon</string>
-    <string name="search_in_your_phone">Search in your phone</string>
-    <string name="english">english</string>
-    <string name="portuguese">Portuguese</string>
+    <string name="search_in_your_phone">Choose on Phone</string>
     <string name="select_language">Select Language</string>
     <string name="confirm">Confirm</string>
     <string name="returnbtn">Return</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="Sobre_o_app">PokemonABC is an educational application. Our goal is through an interactive game to stimulate the child to associate and learn the alphabet in a fun way.</string>
+    <string name="ingles">English</string>
+    <string name="portugues">Portuguese</string>
 
 </resources>
