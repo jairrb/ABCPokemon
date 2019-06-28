@@ -20,9 +20,22 @@ public class CadastroActivity extends AppCompatActivity {
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutUser;
     TextInputLayout textInputLayoutPassword;
-
+    SharedPreferences preferences;
     Button btnRegister;
     Button btnFacebook;
+
+
+    public CadastroActivity() {
+        this.preferences = preferences;
+    }
+
+    public SharedPreferences getPreferences() {
+        return preferences;
+    }
+
+    public void setPreferences(SharedPreferences preferences) {
+        this.preferences = preferences;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +46,7 @@ public class CadastroActivity extends AppCompatActivity {
 
         initViews();
 
-        final SharedPreferences preferences = getSharedPreferences("APP_REGISTER", MODE_PRIVATE);
+         preferences = getSharedPreferences("APP_REGISTER", MODE_PRIVATE);
 
         findViewById(R.id.touch).setOnTouchListener(new View.OnTouchListener() {
             @Override

@@ -1,22 +1,25 @@
 package br.com.digitalhouse.abcpokemon.menu_perfil;
 
-
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.app.Fragment;
 import android.widget.TextView;
-
 import br.com.digitalhouse.abcpokemon.R;
+import br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity;
+import br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments.AboutUsFragment;
 import br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments.EditarPerfilFragment;
 
 public class MenuPerfilActivity extends AppCompatActivity {
 
     private TextView btnEditProfile;
-    private TextView btnSocialMedia;
     private TextView btnAboutUs;
     private TextView btnExitMP;
 
@@ -24,62 +27,81 @@ public class MenuPerfilActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_perfil);
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         initViews();
+
 
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-               // startActivity(new Intent(MenuPerfilActivity.this, EditarPerfilFragment.class));
-
-                replaceFragment(new EditarPerfilFragment());
+                    replaceFragment(R.id.conteudo, new EditarPerfilFragment());
             }
         });
-    }
 
 
-       /* btnSocialMedia.setOnClickListener(new View.OnClickListener() {
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-               // addFragment(new SocialMediaFragment);
+               replaceFragment(R.id.conteudoTodo, new AboutUsFragment());
 
             }
         });
 
-      btnAboutUs.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
+        btnExitMP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-             //addFragment(new AboutUsFragment);
-
-          }
-      });
-
-      btnExitMP.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-
-           // startActivity(new Intent(MenuPerfilActivity.this, Verificar.class));
+                 startActivity(new Intent(MenuPerfilActivity.this, OpcoesGameActivity.class));
 
 
-          }
-      });*/
+            }
+        });
+
+    }
 
 
-    public void replaceFragment(Fragment fragmento) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.game, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_exit) {
+
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    private void replaceFragment(int position, Fragment fragmento){
+
         FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.conteudo, fragmento, "TrocarFragmentoMP").commit();
+        FragmentTransaction transaction = manager.beginTransaction();  transaction.setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit);
+        transaction.replace(position, fragmento,"TrocarFragmentoMenu").commit();
+        transaction.addToBackStack(null);
+
 
     }
 
     private void initViews () {
 
         btnEditProfile = findViewById(R.id.editProfileMP);
-        btnSocialMedia = findViewById (R.id.socialMediaMP);
         btnAboutUs = findViewById (R.id.aboutUsMP);
         btnExitMP = findViewById (R.id.exitMP);
     }
+
+
 }

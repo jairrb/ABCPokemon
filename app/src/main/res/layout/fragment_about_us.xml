@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_perfil.menu_perfil_fragments.AboutUsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_top_radius"
+            android:backgroundTint="@color/light_blue_background"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+            <ImageView
+                android:layout_marginStart="-20dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@mipmap/ic_bpikachu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobre o app"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background_bottom_radius"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            >
+
+            <TextView
+
+                android:id="@+id/exitMP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Sobre_o_app"
+                android:textColor="@color/colorWhite"
+                android:padding="16dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

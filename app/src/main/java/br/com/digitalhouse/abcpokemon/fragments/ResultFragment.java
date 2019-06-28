@@ -74,6 +74,17 @@ public class ResultFragment extends Fragment {
             }
         });
 
+        imageViewStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(integration instanceof IntegrationFragment) {
+                    integration.integrationStack(new FavoriteFragment());
+                }
+            }
+        });
+
         return view;
     }
+
+
 }

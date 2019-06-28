@@ -2,16 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/fragment_aemail"
     tools:context=".menu_perfil.menu_perfil_fragments.AlterarEmailFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_dark_background"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/background_bottom_radius"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -21,13 +27,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="right"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/ic_pokeball"/>
 
             <TextView
@@ -36,18 +43,18 @@
                 android:text="@string/new_email"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
             <EditText
                 android:id="@+id/newEmail"
-                android:layout_width="280dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="50dp"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
                 android:textColor="@color/colorWhite"
                 android:paddingStart="16dp"
-                android:textSize="24sp"
+                android:paddingEnd="16dp"
+                android:textSize="20sp"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/button_radius_two"
                 android:backgroundTint="@color/edittext_dark_blue"/>
@@ -62,13 +69,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="right"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
             <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/ic_pokeball"/>
 
             <TextView
@@ -77,36 +85,38 @@
                 android:text="@string/confirm_new_email"
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorWhite"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
 
         <EditText
             android:id="@+id/confirmNewEmail"
-            android:layout_width="280dp"
-            android:layout_marginStart="50dp"
-            android:layout_height="50dp"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
             android:textColor="@color/colorWhite"
             android:paddingStart="16dp"
-            android:textSize="24sp"
+            android:paddingEnd="16dp"
+            android:textSize="20sp"
             android:inputType="textEmailAddress"
             android:background="@drawable/button_radius_two"
             android:backgroundTint="@color/edittext_dark_blue"/>
         </LinearLayout>
 
         <Button
-            android:id="@+id/confirmarNovoEmail"
-            android:layout_marginTop="100dp"
-            android:layout_width="280dp"
+            android:id="@+id/btnConfirmNemail"
+            android:layout_marginTop="32dp"
+            android:layout_width="200dp"
+            android:gravity="center"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:backgroundTint="@color/light_blue_background"
             android:background="@drawable/button_radius_two"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="@color/colorWhite"
             android:textAllCaps="false"
-            android:text="@string/confirm"
-            />
+            android:text="@string/confirm"/>
+
+    </LinearLayout>
 
     </LinearLayout>
 
