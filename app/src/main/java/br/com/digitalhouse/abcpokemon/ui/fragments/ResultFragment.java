@@ -1,7 +1,6 @@
-package br.com.digitalhouse.abcpokemon.fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;

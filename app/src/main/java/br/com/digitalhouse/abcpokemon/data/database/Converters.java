@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.database;
+package br.com.digitalhouse.abcpokemon.data.database;
 
 
 import android.arch.persistence.room.TypeConverter;

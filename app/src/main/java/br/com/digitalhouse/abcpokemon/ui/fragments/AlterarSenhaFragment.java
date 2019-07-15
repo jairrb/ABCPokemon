@@ -1,7 +1,6 @@
-package br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,10 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.cadastro.CadastroActivity;
-import br.com.digitalhouse.abcpokemon.fragments.ShareFragment;
-
-import static android.content.Context.MODE_PRIVATE;
+import br.com.digitalhouse.abcpokemon.core.CadastroActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -92,8 +88,6 @@ public class AlterarSenhaFragment extends Fragment {
         transaction.setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
                 R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit);
         transaction.replace(conteudo, fragmento, "TrocarFragmentoAS").commit();
-        transaction.addToBackStack(null);
-
 
     }
 

@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.cadastro;
+package br.com.digitalhouse.abcpokemon.core;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +12,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+
+import java.util.Objects;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.login.LoginActivity;
@@ -52,7 +54,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                imm.hideSoftInputFromWindow(Objects.requireNonNull(getCurrentFocus()).getWindowToken(), 0);
                 return true;
             }
         });

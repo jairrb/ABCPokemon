@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_game"
-    tools:context=".fragments.FavoriteFragment">
+    tools:context=".ui.fragments.FavoriteFragment">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

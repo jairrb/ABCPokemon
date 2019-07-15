@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_ep"
-    tools:context=".menu_perfil.menu_perfil_fragments.EditarPerfilFragment">
+    tools:context=".ui.fragments.EditarPerfilFragment">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
 import android.os.Bundle;
@@ -43,6 +43,8 @@ public class FavoriteFragment extends Fragment {
     private void replaceFragment(Fragment fragment) {
         getFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                        R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit)
                 .replace(R.id.containerFavorite,fragment)
                 .commit();
     }

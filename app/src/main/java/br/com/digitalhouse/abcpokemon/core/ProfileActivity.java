@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.fragments.ShareFragment;
+import br.com.digitalhouse.abcpokemon.ui.fragments.ShareFragment;
 
 public class ProfileActivity extends AppCompatActivity {
 

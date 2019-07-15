@@ -8,11 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.List;
-
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.interfaces.RecyclerViewFavoriteClickListener;
 import br.com.digitalhouse.abcpokemon.model.Pokemon;
 
 public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerViewFavoriteAdapter.ViewHolder> {
@@ -27,13 +24,19 @@ public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerVi
     public RecyclerViewFavoriteAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.favorite_recycleview_item,viewGroup,false);
-        return new ViewHolder(view);
+
+        ViewHolder viewHolder = new ViewHolder(view);
+
+
+        return viewHolder;
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewFavoriteAdapter.ViewHolder viewHolder, int i) {
         final Pokemon pokemon = pokemonList.get(i);
         viewHolder.bind(pokemon);
+
     }
 
     @Override
@@ -41,10 +44,9 @@ public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerVi
         return pokemonList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private ImageView imageViewPokemon;
         private TextView textViewName;
-        private TextView textViewLevel;
         private ImageView imageViewRecycle;
 
         public ViewHolder(@NonNull View itemView) {
@@ -52,7 +54,8 @@ public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerVi
             imageViewPokemon = itemView.findViewById(R.id.imageViewPokemon);
             imageViewRecycle = itemView.findViewById(R.id.imageViewRecycle);
             textViewName = itemView.findViewById(R.id.textViewName);
-            textViewLevel = itemView.findViewById(R.id.textViewLevel);
+
+            imageViewRecycle.setOnClickListener(this);
 
         }
         public void bind(Pokemon pokemon){
@@ -62,5 +65,41 @@ public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerVi
             textViewName.setText(pokemon.getName());
 
         }
+
+        @Override
+        public void onClick(View v) {
+
+            final MyClickListener listener = new MyClickListener() {
+                @Override
+                public void onEdit(int p) {
+
+                }
+
+                @Override
+                public void onDelete(int p) {
+
+
+                    pokemonList.remove(getLayoutPosition());
+
+
+
+                }
+            };
+
+            switch (v.getId()) {
+
+                case R.id.imageViewRecycle:
+                    listener.onDelete(this.getLayoutPosition());
+                    break;
+            }
+
+            }
+
+        }
+
+    public interface MyClickListener {
+        void onEdit(int p);
+        void onDelete(int p);
     }
+
 }

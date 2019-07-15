@@ -1,8 +1,7 @@
-package br.com.digitalhouse.abcpokemon.fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -12,17 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
-import br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity;
-import me.sargunvohra.lib.pokekotlin.client.PokeApi;
-import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
-import me.sargunvohra.lib.pokekotlin.model.Pokemon;
-import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 /**
  * A simple {@link Fragment} subclass.
