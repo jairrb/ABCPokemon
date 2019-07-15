@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments;
+package br.com.digitalhouse.abcpokemon.fragments;
 
 
 import android.os.Bundle;
@@ -85,7 +85,6 @@ public class AlterarEmailFragment extends Fragment {
         transaction.setCustomAnimations(R.anim.transaction_fragment_enter, R.anim.transaction_fragment_exit,
                 R.anim.transaction_fragment_popenter, R.anim.transaction_fragment_pop_exit);
         transaction.replace(conteudo, fragmento, "TrocarFragmentoAS").commit();
-        transaction.addToBackStack(null);
 
     }
 

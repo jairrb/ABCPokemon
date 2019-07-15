@@ -9,7 +9,7 @@
         android:id="@+id/touch"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".cadastro.CadastroActivity">
+        tools:context=".core.CadastroActivity">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBarLayout3"

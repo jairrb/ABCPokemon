@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.cadastro;
+package br.com.digitalhouse.abcpokemon.core;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

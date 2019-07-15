@@ -4,7 +4,7 @@
     android:id="@+id/fragment_asenha"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".menu_perfil.menu_perfil_fragments.AlterarSenhaFragment">
+    tools:context=".fragments.AlterarSenhaFragment">
 
 
     <LinearLayout

@@ -4,13 +4,8 @@
     android:id="@+id/fragment_afoto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".menu_perfil.menu_perfil_fragments.AlterarFotoFragment">
+    tools:context=".fragments.AlterarFotoFragment">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +16,7 @@
             android:padding="16dp">
 
             <LinearLayout
-                android:layout_width="340dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -130,6 +125,5 @@
 
         </LinearLayout>
 
-    </LinearLayout>
 
 </FrameLayout>

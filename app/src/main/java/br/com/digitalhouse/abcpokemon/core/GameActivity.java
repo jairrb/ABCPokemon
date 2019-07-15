@@ -52,6 +52,8 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
     private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                        R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit)
                 .replace(R.id.container, fragment)
                 .commit();
     }
@@ -59,6 +61,8 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
     private void replaceFragmentStack(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                        R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit)
                 .replace(R.id.container, fragment)
                 .addToBackStack("FRAGMENTS")
                 .commit();

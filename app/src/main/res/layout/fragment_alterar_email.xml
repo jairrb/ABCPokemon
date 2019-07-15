@@ -4,12 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/fragment_aemail"
-    tools:context=".menu_perfil.menu_perfil_fragments.AlterarEmailFragment">
+    tools:context=".fragments.AlterarEmailFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,8 +114,5 @@
             android:text="@string/confirm"/>
 
     </LinearLayout>
-
-    </LinearLayout>
-
 
 </FrameLayout>

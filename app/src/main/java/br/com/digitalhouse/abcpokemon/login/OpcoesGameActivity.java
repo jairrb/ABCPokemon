@@ -9,8 +9,7 @@ import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.core.GameActivity;
-import br.com.digitalhouse.abcpokemon.core.ProfileActivity;
-import br.com.digitalhouse.abcpokemon.menu_perfil.MenuPerfilActivity;
+import br.com.digitalhouse.abcpokemon.core.MenuPerfilActivity;
 
 public class OpcoesGameActivity extends AppCompatActivity {
     Button btnFastGame;

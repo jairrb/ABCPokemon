@@ -1,26 +1,18 @@
-package br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments;
+package br.com.digitalhouse.abcpokemon.fragments;
 
 
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.Locale;
-
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.menu_perfil.MenuPerfilActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,6 +66,7 @@ public class TrocarIdiomaFragment extends Fragment {
         });
 
         return view;
+
     }
 
     public void replaceFragment(int conteudo, Fragment fragmento) {
@@ -82,8 +75,9 @@ public class TrocarIdiomaFragment extends Fragment {
         transaction.setCustomAnimations(R.anim.transaction_fragment_enter, R.anim.transaction_fragment_exit,
                 R.anim.transaction_fragment_popenter, R.anim.transaction_fragment_pop_exit);
         transaction.replace(conteudo, fragmento, "TrocarFragmentoIdioma").commit();
-        transaction.addToBackStack(null);
+
 
     }
+
 
 }

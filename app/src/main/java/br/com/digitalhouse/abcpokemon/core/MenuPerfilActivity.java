@@ -1,6 +1,7 @@
-package br.com.digitalhouse.abcpokemon.menu_perfil;
+package br.com.digitalhouse.abcpokemon.core;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
@@ -13,11 +14,13 @@ import android.view.View;
 import android.support.v4.app.Fragment;
 import android.widget.TextView;
 import br.com.digitalhouse.abcpokemon.R;
+import br.com.digitalhouse.abcpokemon.interfaces.OnBackPressedListener;
 import br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity;
-import br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments.AboutUsFragment;
-import br.com.digitalhouse.abcpokemon.menu_perfil.menu_perfil_fragments.EditarPerfilFragment;
+import br.com.digitalhouse.abcpokemon.fragments.AboutUsFragment;
+import br.com.digitalhouse.abcpokemon.fragments.EditarPerfilFragment;
+import br.com.digitalhouse.abcpokemon.model.Pokemon;
 
-public class MenuPerfilActivity extends AppCompatActivity {
+public class MenuPerfilActivity extends AppCompatActivity implements OnBackPressedListener {
 
     private TextView btnEditProfile;
     private TextView btnAboutUs;
@@ -77,7 +80,7 @@ public class MenuPerfilActivity extends AppCompatActivity {
 
         if (id == R.id.action_exit) {
 
-            NavUtils.navigateUpFromSameTask(this);
+            NavUtils.navigateUpTo(this, new Intent(this, GameActivity.class));
             return true;
         }
 
@@ -88,13 +91,13 @@ public class MenuPerfilActivity extends AppCompatActivity {
     private void replaceFragment(int position, Fragment fragmento){
 
         FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();  transaction.setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
                 R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit);
         transaction.replace(position, fragmento,"TrocarFragmentoMenu").commit();
-        transaction.addToBackStack(null);
-
 
     }
+
 
     private void initViews () {
 
@@ -103,5 +106,38 @@ public class MenuPerfilActivity extends AppCompatActivity {
         btnExitMP = findViewById (R.id.exitMP);
     }
 
+    @Override
+    public void onBackPressed()
+    {
 
+        int contar = getSupportFragmentManager().getBackStackEntryCount();
+
+        if (contar == 0) {
+            super.onBackPressed();
+
+        } else {
+            getSupportFragmentManager().popBackStack();
+        }
+
+    }
+
+
+    @Override
+    public void doBack() {
+
+         class BaseBackPressedListener implements OnBackPressedListener {
+            private final FragmentActivity activity;
+
+            public BaseBackPressedListener(FragmentActivity activity) {
+                this.activity = activity;
+
+            }
+
+            @Override
+            public void doBack() {
+                activity.getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            }
+        }
+
+    }
 }
