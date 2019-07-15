@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.cadastro.CadastroActivity;
+import br.com.digitalhouse.abcpokemon.core.CadastroActivity;
 
 public class OpcoesLoginActivity extends AppCompatActivity {
 

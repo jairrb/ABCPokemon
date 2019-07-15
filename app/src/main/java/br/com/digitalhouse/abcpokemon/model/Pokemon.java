@@ -1,10 +1,22 @@
 package br.com.digitalhouse.abcpokemon.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@Entity(tableName = "pokemons")
+
 public class Pokemon implements Parcelable {
+
+    @PrimaryKey(autoGenerate = true)
+    private long id;
+
+    @ColumnInfo(name = "name")
     private String name;
+
+    @ColumnInfo(name = "image")
     private int image;
 
     public Pokemon(String name, int image) {
@@ -28,6 +40,18 @@ public class Pokemon implements Parcelable {
             return new Pokemon[size];
         }
     };
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public static Creator<Pokemon> getCREATOR() {
+        return CREATOR;
+    }
 
     public String getName() {
         return name;

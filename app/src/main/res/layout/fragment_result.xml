@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue_game"
-        tools:context=".fragments.ResultFragment">
+        tools:context=".ui.fragments.ResultFragment">
 
         <ImageView
             android:id="@+id/imageViewStar"

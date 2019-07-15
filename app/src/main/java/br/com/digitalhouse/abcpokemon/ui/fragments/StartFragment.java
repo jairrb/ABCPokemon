@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
 import android.content.Context;
@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
 import br.com.digitalhouse.abcpokemon.R;

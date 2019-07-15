@@ -26,7 +26,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.digitalhouse.abcpokemon.login.OpcoesGameActivity" />
         </activity>
-        <activity android:name=".menu_perfil.MenuPerfilActivity" />
+        <activity android:name=".core.MenuPerfilActivity" />
         <activity
             android:name=".login.OpcoesGameActivity"
             android:screenOrientation="portrait" />
@@ -37,7 +37,7 @@
             android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".splash.SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastro.CadastroActivity" />
+        <activity android:name=".core.CadastroActivity" />
     </application>
 
 </manifest>

@@ -3,8 +3,6 @@ package br.com.digitalhouse.abcpokemon.core;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,7 +10,7 @@ import android.view.MenuItem;
 
 import br.com.digitalhouse.abcpokemon.interfaces.IntegrationFragment;
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.fragments.StartFragment;
+import br.com.digitalhouse.abcpokemon.ui.fragments.StartFragment;
 
 public class GameActivity extends AppCompatActivity  implements IntegrationFragment {
     @Override
@@ -52,6 +50,8 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
     private void replaceFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                        R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit)
                 .replace(R.id.container, fragment)
                 .commit();
     }
@@ -59,6 +59,8 @@ public class GameActivity extends AppCompatActivity  implements IntegrationFragm
     private void replaceFragmentStack(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.transaction_fragment_enter,R.anim.transaction_fragment_exit,
+                        R.anim.transaction_fragment_popenter,R.anim.transaction_fragment_pop_exit)
                 .replace(R.id.container, fragment)
                 .addToBackStack("FRAGMENTS")
                 .commit();

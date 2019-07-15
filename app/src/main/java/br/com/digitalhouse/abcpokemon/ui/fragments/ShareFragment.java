@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.fragments;
+package br.com.digitalhouse.abcpokemon.ui.fragments;
 
 
 import android.content.Context;

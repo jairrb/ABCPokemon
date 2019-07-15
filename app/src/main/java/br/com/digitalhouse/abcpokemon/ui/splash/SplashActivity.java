@@ -1,4 +1,4 @@
-package br.com.digitalhouse.abcpokemon.splash;
+package br.com.digitalhouse.abcpokemon.ui.splash;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
