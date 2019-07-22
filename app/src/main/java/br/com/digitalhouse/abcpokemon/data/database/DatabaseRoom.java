@@ -10,7 +10,7 @@ import android.content.Context;
 
 
 import br.com.digitalhouse.abcpokemon.data.database.dao.PokemonDAO;
-import br.com.digitalhouse.abcpokemon.model.Pokemon;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 
 @Database(entities = {Pokemon.class}, version = 1, exportSchema = false)
 @TypeConverters(Converters.class)
@@ -23,7 +23,7 @@ public abstract class DatabaseRoom extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (DatabaseRoom.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context, DatabaseRoom.class, "my_db")
+                    INSTANCE = Room.databaseBuilder(context, DatabaseRoom.class, "poke_db")
                             .fallbackToDestructiveMigration()
                             .build();
                 }

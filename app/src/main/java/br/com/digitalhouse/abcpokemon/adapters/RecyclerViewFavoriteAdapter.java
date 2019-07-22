@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
 import br.com.digitalhouse.abcpokemon.R;
-import br.com.digitalhouse.abcpokemon.model.Pokemon;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 
 public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerViewFavoriteAdapter.ViewHolder> {
     private List<Pokemon> pokemonList;
@@ -61,7 +61,7 @@ public class RecyclerViewFavoriteAdapter extends RecyclerView.Adapter<RecyclerVi
         public void bind(Pokemon pokemon){
 
             imageViewPokemon.setImageDrawable(ContextCompat
-                    .getDrawable(imageViewPokemon.getContext(), pokemon.getImage()));
+                    .getDrawable(imageViewPokemon.getContext(), pokemon.getId()));
             textViewName.setText(pokemon.getName());
 
         }

@@ -14,7 +14,7 @@ import java.util.List;
 
 import br.com.digitalhouse.abcpokemon.R;
 import br.com.digitalhouse.abcpokemon.adapters.RecyclerViewFavoriteAdapter;
-import br.com.digitalhouse.abcpokemon.model.Pokemon;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 
 /**
  * A simple {@link Fragment} subclass.

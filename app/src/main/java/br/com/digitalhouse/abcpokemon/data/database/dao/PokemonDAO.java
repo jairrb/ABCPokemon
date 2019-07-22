@@ -12,34 +12,31 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
-import br.com.digitalhouse.abcpokemon.model.Pokemon;
+import br.com.digitalhouse.abcpokemon.model.PokemonResponses;
 import io.reactivex.Flowable;
+import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 
 @Dao
 public interface PokemonDAO {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(Pokemon pokemon);
+/*
+   @Insert(onConflict = OnConflictStrategy.REPLACE)
+   void insert(PokemonResponses pokemonResponses);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(List<Pokemon> pokemons);
+    void insertAll(List<PokemonResponses> resultListPoke);
 
     @Update
-    void update(Pokemon pokemon);
-
-    @Delete
-    void delete(Pokemon pokemon);
+    void update(PokemonResponses pokemonResponses);
 
     @Query("SELECT * FROM pokemons")
-    List<Pokemon> getAll();
+    List<PokemonResponses> getAll();
 
-    @Query("SELECT * FROM pokemons")
-    Flowable<List<Pokemon>> getAllRxJava();
+    @Query("SELECT * FROM  pokemons")
+    Flowable<List<PokemonResponses>> getAllRxJava();
 
-    @Query("SELECT * FROM pokemons WHERE id = :id")
-    Pokemon getById(long id);
 
-    @Query("SELECT * FROM pokemons WHERE name = :nome")
-    Pokemon getByName(String nome);
+*/
+
 
 }
