@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
 
-    private static final String BASE_URL = "https://pokeapi.bastionbot.org/v1";
+    private static final String BASE_URL = "https://pokeapi.co/api/v2";
 
     private static Retrofit retrofit;
 
@@ -26,13 +26,13 @@ public class RetrofitService {
             httpClient.connectTimeout(30, TimeUnit.SECONDS);
             httpClient.writeTimeout(30, TimeUnit.SECONDS);
 
-          /*  // Se for Debug habilitamos os logs
+            // Se for Debug habilitamos os logs
             if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
                 httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
                 httpClient.addInterceptor(httpLoggingInterceptor);
                 httpClient.addNetworkInterceptor(new StethoInterceptor());
-            }*/
+            }
 
             // Inicializamos o retrofit
             retrofit = new Retrofit.Builder()

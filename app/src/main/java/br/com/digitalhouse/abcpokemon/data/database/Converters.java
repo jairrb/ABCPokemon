@@ -9,7 +9,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.Date;
 import java.util.List;
 
 import br.com.digitalhouse.abcpokemon.model.PokemonResponses;
@@ -17,6 +16,7 @@ import br.com.digitalhouse.abcpokemon.model.PokemonResponses;
 public class Converters {
 
 
+/*
     @TypeConverter
     public List<PokemonResponses> fromPokeList(String value) {
         Type listType = (Type) new TypeToken<List<PokemonResponses>>() {
@@ -55,6 +55,7 @@ public class Converters {
         Gson gson = new Gson();
         return gson.toJson(list);
     }
+*/
 
 
 

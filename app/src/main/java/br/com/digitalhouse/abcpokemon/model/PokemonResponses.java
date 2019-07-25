@@ -1,125 +1,127 @@
 
 package br.com.digitalhouse.abcpokemon.model;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.os.Parcel;
-
-import java.util.Date;
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-@Entity(tableName = "pokemons")
+
+@SuppressWarnings("unused")
 public class PokemonResponses {
 
-    public PokemonResponses() {
-
-    }
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "idPoke")
-    private long idPoke;
-
-    private Abilities abilities;
-    private List<String> eggGroups;
-    private Family family;
-    private Long gen;
-    private List<Double> gender;
-    private String height;
-    private Boolean legendary;
-    private Boolean mega;
-    private Boolean mythical;
+    @Expose
+    private List<Ability> abilities;
+    @SerializedName("base_experience")
+    private Long baseExperience;
+    @Expose
+    private List<Form> forms;
+    @SerializedName("game_indices")
+    private List<GameIndex> gameIndices;
+    @Expose
+    private Long height;
+    @SerializedName("held_items")
+    private List<Object> heldItems;
+    @Expose
+    private Long id;
+    @SerializedName("is_default")
+    private Boolean isDefault;
+    @SerializedName("location_area_encounters")
+    private String locationAreaEncounters;
+    @Expose
+    private List<Move> moves;
+    @Expose
     private String name;
-    private String number;
-    private String species;
-    private String sprite;
-    private Boolean starter;
-    private List<String> types;
-    private Boolean ultraBeast;
-    private String weight;
+    @Expose
+    private Long order;
+    @Expose
+    private Species species;
+    @Expose
+    private Sprites sprites;
+    @Expose
+    private List<Stat> stats;
+    @Expose
+    private List<Type> types;
+    @Expose
+    private Long weight;
 
-
-
-
-    public long getIdPoke() {
-        return idPoke;
-    }
-
-    public void setIdPoke(long idPoke) {
-        this.idPoke = idPoke;
-    }
-
-    public Abilities getAbilities() {
+    public List<Ability> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(Abilities abilities) {
+    public void setAbilities(List<Ability> abilities) {
         this.abilities = abilities;
     }
 
-    public List<String> getEggGroups() {
-        return eggGroups;
+    public Long getBaseExperience() {
+        return baseExperience;
     }
 
-    public void setEggGroups(List<String> eggGroups) {
-        this.eggGroups = eggGroups;
+    public void setBaseExperience(Long baseExperience) {
+        this.baseExperience = baseExperience;
     }
 
-    public Family getFamily() {
-        return family;
+    public List<Form> getForms() {
+        return forms;
     }
 
-    public void setFamily(Family family) {
-        this.family = family;
+    public void setForms(List<Form> forms) {
+        this.forms = forms;
     }
 
-    public Long getGen() {
-        return gen;
+    public List<GameIndex> getGameIndices() {
+        return gameIndices;
     }
 
-    public void setGen(Long gen) {
-        this.gen = gen;
+    public void setGameIndices(List<GameIndex> gameIndices) {
+        this.gameIndices = gameIndices;
     }
 
-    public List<Double> getGender() {
-        return gender;
-    }
-
-    public void setGender(List<Double> gender) {
-        this.gender = gender;
-    }
-
-    public String getHeight() {
+    public Long getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(Long height) {
         this.height = height;
     }
 
-    public Boolean getLegendary() {
-        return legendary;
+    public List<Object> getHeldItems() {
+        return heldItems;
     }
 
-    public void setLegendary(Boolean legendary) {
-        this.legendary = legendary;
+    public void setHeldItems(List<Object> heldItems) {
+        this.heldItems = heldItems;
     }
 
-    public Boolean getMega() {
-        return mega;
+    public Long getId() {
+        return id;
     }
 
-    public void setMega(Boolean mega) {
-        this.mega = mega;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Boolean getMythical() {
-        return mythical;
+    public Boolean getIsDefault() {
+        return isDefault;
     }
 
-    public void setMythical(Boolean mythical) {
-        this.mythical = mythical;
+    public void setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+    }
+
+    public String getLocationAreaEncounters() {
+        return locationAreaEncounters;
+    }
+
+    public void setLocationAreaEncounters(String locationAreaEncounters) {
+        this.locationAreaEncounters = locationAreaEncounters;
+    }
+
+    public List<Move> getMoves() {
+        return moves;
+    }
+
+    public void setMoves(List<Move> moves) {
+        this.moves = moves;
     }
 
     public String getName() {
@@ -130,59 +132,51 @@ public class PokemonResponses {
         this.name = name;
     }
 
-    public String getNumber() {
-        return number;
+    public Long getOrder() {
+        return order;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setOrder(Long order) {
+        this.order = order;
     }
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
 
-    public void setSpecies(String species) {
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
-    public String getSprite() {
-        return sprite;
+    public Sprites getSprites() {
+        return sprites;
     }
 
-    public void setSprite(String sprite) {
-        this.sprite = sprite;
+    public void setSprites(Sprites sprites) {
+        this.sprites = sprites;
     }
 
-    public Boolean getStarter() {
-        return starter;
+    public List<Stat> getStats() {
+        return stats;
     }
 
-    public void setStarter(Boolean starter) {
-        this.starter = starter;
+    public void setStats(List<Stat> stats) {
+        this.stats = stats;
     }
 
-    public List<String> getTypes() {
+    public List<Type> getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setTypes(List<Type> types) {
         this.types = types;
     }
 
-    public Boolean getUltraBeast() {
-        return ultraBeast;
-    }
-
-    public void setUltraBeast(Boolean ultraBeast) {
-        this.ultraBeast = ultraBeast;
-    }
-
-    public String getWeight() {
+    public Long getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(Long weight) {
         this.weight = weight;
     }
 

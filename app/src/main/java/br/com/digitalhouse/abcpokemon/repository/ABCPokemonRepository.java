@@ -13,7 +13,7 @@ import io.reactivex.Flowable;
 
 public class ABCPokemonRepository {
 
-   /* public Flowable<List<PokemonResponses>> getLocalResults(Context context) {
+  /*  public Flowable<List<PokemonResponses>> getLocalResults(Context context) {
         DatabaseRoom room = DatabaseRoom.getDatabase(context);
         PokemonDAO pokemonDAO = room.pokemonDAO();
         return (Flowable<List<PokemonResponses>>) pokemonDAO.getAll();

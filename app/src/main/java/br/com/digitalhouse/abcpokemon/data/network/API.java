@@ -8,6 +8,8 @@ import retrofit2.http.Query;
 
 public interface API {
 
-    @GET("/pokemon/{number}")
-    Observable<PokemonResponses> getPokemons(@Query("number")int number);
+    @GET("/api/v2/pokemon/{id or name}/")
+    Observable<PokemonResponses> getPokemons(@Query("number") int id,
+                                             @Query("nome") String name);
+
 }
