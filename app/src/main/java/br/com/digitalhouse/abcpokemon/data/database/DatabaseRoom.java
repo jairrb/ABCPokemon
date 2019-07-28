@@ -10,9 +10,10 @@ import android.content.Context;
 
 
 import br.com.digitalhouse.abcpokemon.data.database.dao.PokemonDAO;
+import br.com.digitalhouse.abcpokemon.model.PokemonResponses;
 import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 
-@Database(entities = {Pokemon.class}, version = 1, exportSchema = false)
+@Database(entities = {PokemonResponses.class}, version = 1, exportSchema = false)
 @TypeConverters(Converters.class)
 public abstract class DatabaseRoom extends RoomDatabase {
     private static volatile DatabaseRoom INSTANCE;
